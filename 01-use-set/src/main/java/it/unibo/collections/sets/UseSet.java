@@ -3,6 +3,7 @@ package it.unibo.collections.sets;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Example class using {@link java.util.Set}.
@@ -17,7 +18,7 @@ public final class UseSet {
 
     public static void control( Set<String> set, int n){
         for (int i=1; i<= ELEMS; i++) {
-            if (i%n){
+            if (i % n == 0){
                 set.remove(i);
             }
         } 
@@ -34,13 +35,13 @@ public final class UseSet {
          *
          * 1) Builds a TreeSet containing Strings
          */
-        Set<String> set = new Set<>();
+        Set<String> set = new TreeSet<>();
         /*
          * 2) Populates such Collection with all the Strings representing numbers ranging from "1" to
          * "20" (both included)
          */
-        for (int i=1; i<= ELEMS; i++) {
-            set.add(i);
+        for (int i=1; i<= ELEMS; i++){
+            set.add(Integer.toString(i));
         }
         /*
          * 3) Prints its content
